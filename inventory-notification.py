@@ -48,7 +48,7 @@ urls.append('https://www.microcenter.com/product/631926/evga-geforce-rtx-3060-ti
 urls.append('https://www.microcenter.com/product/628342/gigabyte-geforce-rtx-3080-gaming-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card?storeid=045')
 
 #test that is definitely instock locally
-urls.append('https://www.microcenter.com/product/618532/asus-radeon-rx-5700-xt-rog-strix-overclocked-triple-fan-8gb-gddr6-pcie-40-graphics-card?storeid=045')
+#urls.append('https://www.microcenter.com/product/618532/asus-radeon-rx-5700-xt-rog-strix-overclocked-triple-fan-8gb-gddr6-pcie-40-graphics-card?storeid=045')
 #url = urls[0]
 
 instock = False
