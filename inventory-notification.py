@@ -1,6 +1,7 @@
 import twilio
 import requests
 from bs4 import BeautifulSoup
+import re
 
 #always in stock
 url = 'https://www.microcenter.com/product/472489/asus-phoenix-geforce-gtx-1050-ti-single-fan-4gb-gddr5-pcie-video-card'
@@ -15,4 +16,11 @@ soup = BeautifulSoup(page.text, 'html.parser')
 # print(soup.prettify())
 
 
-soup.find_all("small")[-1]
+data = soup.find_all(type="text/javascript")[3]
+dstring = data.string
+
+match = re.search("'inStock':'True'",dstring)
+if match:
+    print("In stock")
+else:
+    print("Not in stock")
