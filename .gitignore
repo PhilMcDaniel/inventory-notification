@@ -130,7 +130,7 @@ dmypy.json
 
 #additions
 config.py
-venv
-env
-.vscode
+venv/
+env/
+.vscode/
 autoexec.bat
