@@ -3,6 +3,10 @@ import config
 import requests
 from bs4 import BeautifulSoup
 import re
+from colorama import init,Fore, Back, Style
+init()
+
+
 
 # twilio authentication
 account_sid = config.account_sid
@@ -74,7 +78,7 @@ for url in urls:
     if match:
         instock = True
         #print(instock)
-        print(f"In stock: {title}")
+        print(Fore.GREEN,f"In stock: {title}")
         message = client.messages \
                     .create(
                         body=f"In stock: {title}\r\n {url}",
@@ -82,7 +86,7 @@ for url in urls:
                         to = config.to_number
                     )
     else:
-        print(f"Not in stock: {title}")
+        print(Fore.RED,f"Not in stock: {title}")
         #print(instock)
 
 #send text if all were checked and none were instock
